@@ -1,0 +1,111 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>984</x><y>160</y><w>168</w><h>56</h></coordinates><panel_attributes>Bank
+-
+- name: String
+- headquarter_location: String
+- branches: List&lt;Branch&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>712</x><y>328</y><w>168</w><h>88</h></coordinates><panel_attributes>savingAccount
+-
+number:integar
+owner:string
+balance:long
+-
+makewithdrawal()
+makeDeposit()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>336</x><y>368</y><w>168</w><h>80</h></coordinates><panel_attributes>ATM
+-
+location:string
+-
+display()
+withdraw()
+deposit()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>560</y><w>168</w><h>56</h></coordinates><panel_attributes>StreetATM (inherits ATM)
+-
+- transaction_limit: 5000
+- operated_by: Branch</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>224</y><w>168</w><h>56</h></coordinates><panel_attributes>WirelessSensor
+-
+- ID: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>384</x><y>544</y><w>168</w><h>56</h></coordinates><panel_attributes>RestaurantATM (inherits ATM)
+-
+- transaction_limit: 500
+- operated_by: Restaurant
+- max_atms: 2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>184</x><y>552</y><w>168</w><h>72</h></coordinates><panel_attributes>PubATM (inherits ATM)
+-
+- transaction_limit: 250
+- operated_by: Pub
+- max_atms: 1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>408</x><y>696</y><w>168</w><h>88</h></coordinates><panel_attributes>Restaurant
+-
+- name: String
+- location: String
+- people_limit: int
+- table_count: int
+- get_people_limit(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>712</y><w>168</w><h>56</h></coordinates><panel_attributes>Pub
+-
+- name: String
+- location: String
+- people_limit: int
+- pokie_count: int
+- get_people_limit(): int
+- get_people_limit(): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1064</x><y>208</y><w>48</w><h>440</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1
+Has &gt;</panel_attributes><additional_attributes>10;530;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>272</y><w>72</w><h>112</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+consists &gt;
+</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>704</x><y>208</y><w>168</w><h>72</h></coordinates><panel_attributes>Record
+-
+id ; integar
+timestamp: datetime
+amount:integar</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>440</y><w>192</w><h>136</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+Type of &gt;
+</panel_attributes><additional_attributes>220;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>440</y><w>72</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+Type of &gt;
+</panel_attributes><additional_attributes>10;130;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>304</x><y>440</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+Type of &gt;
+</panel_attributes><additional_attributes>10;130;40;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>944</x><y>632</y><w>168</w><h>56</h></coordinates><panel_attributes>Branch
+-
+- location: String
+-atms: List&lt;ATM&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>944</x><y>376</y><w>96</w><h>272</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+affillatedWith  &gt;
+</panel_attributes><additional_attributes>10;320;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>272</y><w>88</w><h>72</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+HasHistory &gt;
+</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>872</x><y>368</y><w>96</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=
+m2=1..*
+
+</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>416</y><w>392</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=
+m2=0..*
+</panel_attributes><additional_attributes>470;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>424</y><w>48</w><h>240</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+Has &gt;</panel_attributes><additional_attributes>10;280;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>632</y><w>96</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=
+</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>664</y><w>280</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*
+operated by &gt;</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>608</y><w>24</w><h>88</h></coordinates><panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>592</y><w>88</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=0..2
+m2=0..1
+operated by &gt;</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>616</y><w>88</w><h>112</h></coordinates><panel_attributes>lt=-
+m1=0.1
+m2=0.1
+operated by &gt;</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>352</y><w>232</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=0..*
+display &gt;</panel_attributes><additional_attributes>270;20;10;20</additional_attributes></element></diagram>
