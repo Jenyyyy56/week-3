@@ -1,0 +1,60 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>70</x><y>90</y><w>210</w><h>150</h></coordinates><panel_attributes>Library
+--
+
+--
++ add_book(book: Book)
++ remove_book(book: Book)
++ new_library_card(person: Person)
++ deacitve_library_card(card: Card)
++ list_books()
++ list_patrons()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>90</y><w>210</w><h>90</h></coordinates><panel_attributes>Card
+--
+- person: str
+--
++ borrow_book()
++ return_book()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>330</y><w>170</w><h>90</h></coordinates><panel_attributes>Person
+--
+- nama: str
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>300</y><w>210</w><h>120</h></coordinates><panel_attributes>Book
+--
+- title: str
+- year: int
+- loan_status: bool
+--
++ return_book()
++ borrow_book()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>170</y><w>190</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..1
+has</panel_attributes><additional_attributes>10;10;110;10;110;170;170;170</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>120</y><w>260</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..1
+has</panel_attributes><additional_attributes>10;20;240;20</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>120</y><w>190</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+has</panel_attributes><additional_attributes>10;10;150;10;150;210</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>350</y><w>170</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..n
+m2=1..n
+
+has
+</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>320</y><w>170</w><h>90</h></coordinates><panel_attributes>Menu
+--
+- nama: str
+--
++ run()
++ input()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>540</y><w>140</w><h>90</h></coordinates><panel_attributes>MenuItem
+--
+- name: str
+- method: str
+- parameters
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>230</y><w>50</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+has</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>400</y><w>50</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+
+has
+</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element></diagram>
